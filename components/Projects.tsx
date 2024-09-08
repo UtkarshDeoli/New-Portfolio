@@ -27,14 +27,6 @@ const projects = [
 		vercelLink: "https://safebet.vercel.app/",
 	},
 	{
-		title: "Rcmnd",
-		stack: "Python | Streamlit",
-		description:
-			"Machine Learning model built to recommend K-Dramas that users will like to watch next.",
-		githubLink: "https://github.com/Vanshika-Rana/RCMND",
-		vercelLink: "https://4x5neh5jzujhjfauls77vq.streamlit.app/",
-	},
-	{
 		title: "Story Sphere",
 		stack: "Next JS | Tailwind CSS | Supabase | Typescript",
 		description:
