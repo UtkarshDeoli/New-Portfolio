@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { SiYoutube } from "react-icons/si";
+import { SiLeetcode } from "react-icons/si";
 
 export default function Hero() {
 	const [vantaEffect, setVantaEffect] = useState(0);
@@ -72,11 +73,19 @@ export default function Hero() {
 						</p>
 					</Link>
 					<Link
-						href='https://www.youtube.com/channel/UtkarshDeoli'
+						href='https://www.youtube.com/@UtkarshDeoli'
 						target='_blank'
 						passHref>
 						<p rel='noopener noreferrer'>
 							<SiYoutube size={25} />
+						</p>
+					</Link>
+					<Link
+						href='https://leetcode.com/sagemodeutkarsh/'
+						target='_blank'
+						passHref>
+						<p rel='noopener noreferrer'>
+							<SiLeetcode size={25} />
 						</p>
 					</Link>
 				</div>
