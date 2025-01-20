@@ -3,7 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "aos/dist/aos.css";
 import WAVES from "vanta/src/vanta.waves";
 import * as THREE from "three";
-import Test from "../public/images/test.png";
+import Test from "../public/images/temp.webp";
+import Image from 'next/image';
 
 interface Article {
   title: string;
@@ -13,33 +14,15 @@ interface Article {
 
 const topArticles: Article[] = [
   {
-    title: "Learn to use Supabase with Next JS - A Beginner Friendly Application",
-    content:
-      "Building a simple application using Supabase on the backend and Next JS on the front end. This tutorial aims to help you grasp the process of easily writing and retrieving data from a database.",
-    bloglink:
-      "https://aahiknsv.hashnode.dev/learn-to-use-supabase-with-next-js-a-beginner-friendly-application",
+    title: "Recipe for auto blogs (Obsidian + Hugo)",
+    content:"Learn how to automate your blogging workflow using Obsidian and Hugo.",
+    bloglink:"https://utkarshdeoli.in/blog/auto-blogs/",
   },
   {
-    title: "Building a TODO Application in Solidity",
-    content:
-      "The article demonstrates how to create a to-do application using Solidity, a programming language for Ethereum smart contracts, providing a guide on building decentralized task management on the blockchain.",
-    bloglink: "https://aahiknsv.hashnode.dev/building-a-todo-application-in-solidity",
+    title: "Install Arch on your PC",
+    content:"Learn how to install Arch Linux on your PC. A step by step guide.",
+    bloglink:"https://utkarshdeoli.in/blog/install-arch/",
   },
-  {
-    title: "Building a Simple Timer with Vanilla JavaScript",
-    content:
-      "The article provides a step-by-step guide for building a basic timer application in Vanilla JavaScript without additional frameworks or libraries.",
-    bloglink:
-      "https://aahiknsv.hashnode.dev/building-a-simple-timer-with-vanilla-javascript",
-  },
-  {
-    title: "How to Send Emails in Node JS using the SendGrid API",
-    content:
-      "The article guides integrating SendGrid with Node.js for efficient email delivery, covering key steps like API key setup, email composition, and sending via the SendGrid service.",
-    bloglink:
-      "https://aahiknsv.hashnode.dev/how-to-send-emails-in-node-js-using-the-sendgrid-api",
-  },
-  // Add more articles as needed
 ];
 
 const ArticleComponent: React.FC = () => {
@@ -75,6 +58,7 @@ const ArticleComponent: React.FC = () => {
 
   return (
     <div
+      id='blog'
       className='top-articles bg-slate-950 w-full min-h-screen flex flex-col items-center justify-center'
       ref={vantaRef}
     >
@@ -89,7 +73,8 @@ const ArticleComponent: React.FC = () => {
             data-aos='fade-up'
             data-aos-delay={`${index * 100}`}
           >
-            <img src={Test.src} alt="" />
+            {/* <iframe src={article.bloglink} className="w-full "></iframe> */}
+            <Image src={Test} alt="Test Image" />
             {/* Article content */}
             <div className='p-6'>
               <h2 className='text-2xl font-bold mb-2'>{article.title}</h2>

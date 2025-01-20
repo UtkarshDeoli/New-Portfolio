@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.17",
     "next": "^14.2.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -19,7 +21,8 @@
     "slick-carousel": "^1.8.1",
     "swiper": "^11.0.5",
     "swiper-react": "^1.0.0",
-    "three": "^0.170.0",
+    "tailwind-merge": "^2.5.5",
+    "three": "^0.121.0",
     "vanta": "^0.5.24"
   },
   "devDependencies": {

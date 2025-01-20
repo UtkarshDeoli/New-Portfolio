@@ -2,13 +2,12 @@ import React from "react";
 
 const projects = [
 	{
-		title: "Tomato Timer",
-		stack: "Flutter | Firebase", 
+		title: "Reflectify",
+		stack: "Next JS | Tailwind CSS | OpenAI",
 		description:
-			"A simple easy to use Pomodoro timer app built using Flutter.",
-		githubLink: "https://github.com/UtkarshDeoli/Tomato-Timer",
-		vercelLink:
-			"https://tomato.utkarshdeoli.in",
+			"AI chatbot website.",
+		githubLink: "https://github.com/utkarshdeoli/reflectify",
+		vercelLink: "https://reflectify.utkarshdeoli.in/"
 	},
 	{
 		title: "Language Sikho",
@@ -19,34 +18,22 @@ const projects = [
 		vercelLink: "https://www.languagesikho.com/",
 	},
 	{
-		title: "SafeBet",
-		stack: "Solidity | Chainlink | Next JS | Tailwind CSS",
+		title: "Tomato Timer",
+		stack: "Flutter | Firebase", 
 		description:
-			"Your Decentralized Betting Buddy! If you want to bet in the world of Web3, SafeBet is the best choice.",
-		githubLink: "https://github.com/Vanshika-Rana/safebet",
-		vercelLink: "https://safebet.vercel.app/",
-	},
-	{
-		title: "Story Sphere",
-		stack: "Next JS | Tailwind CSS | Supabase | Typescript",
-		description:
-			"Craft a unique narrative by collaborating with individuals from diverse backgrounds.",
-		githubLink: "https://github.com/Vanshika-Rana/storycreator-app",
-		vercelLink: "https://storycreator-app.vercel.app/",
-	},
-	{
-		title: "Social Circle",
-		stack: "Solidity | Next JS | Tailwind CSS | Ethers",
-		description:
-			"A dApp built on Ethereum blockchain that allows you to connect your wallet and drop messages.",
-		githubLink: "https://github.com/Vanshika-Rana/Social-Circle",
-		vercelLink: "https://social-circle.vercel.app/",
+			"A simple easy to use Pomodoro timer app built using Flutter.",
+		githubLink: "https://github.com/UtkarshDeoli/Tomato-Timer",
+		vercelLink:
+			"https://tomato.utkarshdeoli.in",
 	},
 ];
 
 const Project: React.FC = () => {
 	return (
-		<div className="min-h-screen w-full bg-slate-900 flex flex-col items-center justify-center">
+		<div id="projects"
+		
+		className="min-h-screen w-full bg-slate-950 flex flex-col items-center justify-center">
+			
 			<h1 className="text-white text-4xl lg:text-5xl font-bold mt-12">
 				Projects
 			</h1>
@@ -66,6 +53,7 @@ const Project: React.FC = () => {
 	);
 };
 
+
 const ProjectCard: React.FC<{
 	title: string;
 	stack: string;
@@ -73,8 +61,12 @@ const ProjectCard: React.FC<{
 	githubLink: string;
 	vercelLink: string;
 }> = ({ title, stack, description, githubLink, vercelLink }) => {
+	
 	return (
-		<div className="bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between space-y-4 transform hover:scale-105">
+
+		<div 
+		
+		className="bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between space-y-4 transform hover:scale-105">
 			<div>
 				<div className="relative w-full h-80 mb-4">
 					<iframe

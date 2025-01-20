@@ -8,6 +8,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { SiYoutube } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
+import { Navbar } from "./navbar";
 
 export default function Hero() {
 	const [vantaEffect, setVantaEffect] = useState(0);
@@ -34,9 +35,20 @@ export default function Hero() {
 		}
 	}, [vantaEffect]);
 	return (
+		
 		<div
+			id='home'
+				
 			className='bg-slate-950 min-h-screen w-full flex flex-col justify-center items-start text-gray-200'
 			ref={vantaRef}>
+				<div className="hidden md:block">
+				<Navbar navItems={[
+					{ name: "Home", link: "#" },
+					{ name: "Projects", link: "#projects" },
+					{ name: "Blog", link: "#blog" },
+					{ name: "Contact", link: "mailto:utkarsh.deoli@gmail.com" },
+				]}/>
+				</div>
 			<div className=' mx-12 sm:mx-16 md:mx-20 lg:mx-24 xl:mx-32'>
 				<h1 className='tracking-wider font-bold text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl '>
 					Utkarsh Deoli
@@ -90,10 +102,11 @@ export default function Hero() {
 					</Link>
 				</div>
 				<a
-					href='https://firebasestorage.googleapis.com/v0/b/utkarshdeolidev.appspot.com/o/UtkarshDeoli.pdf?alt=media'
+					className=""
+					href='https://drive.google.com/file/d/1lV4OU1-wZ83kmngzoVsP1--EPq4CBU62/view?usp=sharing'
 					target='_blank' //
 					download='UtkarshDeoli.pdf'>
-					<button className='tracking-wider border-purple-800 border-2 rounded-lg font-medium text-white px-4 py-2 mt-4 text-sm md:text-lg lg:text-xl transition-all duration-300 ease-in-out hover:bg-purple-800 focus:outline-none focus:ring focus:border-purple-900'>
+					<button className='self-start relative z-10 inline-flex gap-2.5 h-12 animate-shimmer items-center justify-center rounded-md border border-dark-700 bg-[linear-gradient(110deg,#1A1A1A99,45%,#26262699,55%,#1A1A1A99)] hover:bg-[linear-gradient(110deg,#262626aa,45%,#404040aa,55%,#262626aa)] bg-[length:200%_100%] px-6 font-medium text-sm sm:text-base text-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 bg-opacity-75'>
 						Download Resume
 					</button>
 				</a>
